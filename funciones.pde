@@ -170,7 +170,6 @@ PImage morpheus, pastilla, neoFondo;
   /*cuarta pantalla*/
   void cuartaPantalla() {
   background(0);
-  colorBlanco = (255);
   /*imagen de fondo*/
    neoFondo = loadImage("matrix4.jpg");
    image(neoFondo, 0, 0, 600, 400); 
@@ -185,9 +184,18 @@ PImage morpheus, pastilla, neoFondo;
      texto4= 30;  
     }  
    }
+   
    fill(colorBlanco);
-
    textSize(tamLetra-2);
+   
+    /*efecto cambio de nombres*/
+   if (posY4 >160 && posY4 < 220 || posY4 > 260 && posY4< 320 ||posY4 > 360 && posY4< 420 || posY4 > 460 && posY4< 600){
+    colorBlanco = color(random(0,255));
+    } else {
+    colorBlanco = (255); 
+    }
+    
+    /*personajes y actores*/
    if(posY4 > 100 && posY4 < 220){
     text("Neo", 30, 110);  
     text("Morfeo", 30, 160);     
@@ -196,53 +204,38 @@ PImage morpheus, pastilla, neoFondo;
   if ( posY4 >120 && posY4 < 220){
    text("por Keanu Reeves", 30, 130);
    text("por Laurence Fishburne", 30, 180);
-   if(posY4 > 160 && posY4< 220){
-  colorBlanco=color(random(0,255));
-  }
+      
    } 
-  
-  
-  
-
 
   if( posY4 >220 && posY4 < 320){ 
    text("Trinity", 30, 110);
    text("por Carrie-Anne Moss", 30, 130);
    text("Agente Smith", 30, 160);
    text("por Hugo Weaving", 30, 180);
-  if (posY4 > 260 && posY4< 320){
-  colorBlanco=color(random(0,255));
-  }
+ 
   } 
   
-
+ 
   if( posY4 > 320 && posY4 < 420){ 
    text("Oraculo", 30, 110);
    text("por Gloria Foster", 30, 130);
    text("Cypher", 30, 160);
    text("por Joe Pantoliano", 30, 180);
-   if (posY4 > 360 && posY4< 420){
-   colorBlanco=color(random(0,255));
-  }
+   
   } 
  
-  
   
   if( posY4 > 420 && posY4 < 520){
    text("Agente Brown", 30, 110);
    text("por Paul Goddard", 30, 130);
    text("Agente Jones", 30, 160);
-   text("Robert Taylor", 30, 180);
+   text("por Robert Taylor", 30, 180);
   } 
 
-  if (posY4 > 460 && posY4< 600){
-  colorBlanco=color(random(0,255));
-  }
-
+ 
   if (posY4 > 600){
   finalTitulo = 5;  
   }
-  
   
   cursorAnimacion();
   posY4++;
