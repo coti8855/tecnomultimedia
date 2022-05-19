@@ -1,6 +1,15 @@
 
+PFont fuenteNueva;
+
+
+
 void setup(){
  size(400,400);
+ fuenteNueva = loadFont("BankGothicBT.vlw");
+  textFont(fuenteNueva);
+  noCursor();
+
+   
 }
 
 void draw(){
@@ -14,6 +23,16 @@ void draw(){
  if(finalTitulo ==3){
   tercerPantalla(); 
  }
+if(finalTitulo ==4){
+  cuartaPantalla(); 
+ }
+
+  if(finalTitulo ==5){
+  quintaPantalla(); 
+ }
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
 
 /*
@@ -39,5 +58,7 @@ void keyPressed(){
   if(finalTitulo == 0 && key == 'a'){
     finalTitulo= 3;
   }
+  
+  
 }
   
