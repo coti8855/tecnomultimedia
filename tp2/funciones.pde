@@ -22,6 +22,7 @@ void dibujarFuncion(){
      colorInter=color(100); 
     }
   }     
+  
  }
  
    void coloresRandom(int claro, int oscuro){  

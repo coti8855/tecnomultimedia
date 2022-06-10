@@ -1,5 +1,5 @@
 
-
+/* https://youtu.be/NSM0WPMgwDA */
 int cant = 8;
 int tamX, tamY;
 color colorOscuro = (0), colorClaro=(255), colorInter=(100);
