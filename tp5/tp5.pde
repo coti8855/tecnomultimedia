@@ -1,19 +1,20 @@
+/*  https://youtu.be/GzlXOC_if4s  */
+
 ProgramaPrincipal programa;
- import processing.sound.*;
+import processing.sound.*;
 SoundFile fileTrack, fileTrack2;
-void setup(){
+void setup() {
   size(323, 456);
   programa = new ProgramaPrincipal();
-   fileTrack = new SoundFile(this, "data/click.mp3"); 
-   fileTrack2 = new SoundFile(this, "data/pum.mp3");
+  fileTrack = new SoundFile(this, "data/click.mp3"); 
+  fileTrack2 = new SoundFile(this, "data/pum.mp3");
 }
 
-void draw(){
+void draw() {
   background(255);
- programa.dibujar();
+  programa.dibujar();
 }
 
-void mousePressed(){
+void mousePressed() {
   programa.mousePresionado();
-  
 }
